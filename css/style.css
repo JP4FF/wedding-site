@@ -1,0 +1,106 @@
+@font-face {
+  font-family: 'AGOpus';
+  font-weight: 400;
+  src: url('../assets/fonts/Agopus-Roman.ttf');
+}
+
+@font-face {
+  font-family: 'Chervil';
+  font-weight: 400;
+  src: url('../assets/fonts/Chervil-Regular.otf');
+}
+/* ---------------------------------------------------- */
+
+html,
+body {
+  height: 100dvh;
+  font-family: 'AGOpus', sans-serif;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle,
+      transparent 70%,
+      rgba(20, 20, 38, 0.6) 90%,
+      rgb(0 1 8 / 80%) 100%
+    ),
+    url('../assets/img/main-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/img/starts.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header {
+  position: relative;
+}
+
+.header__image-decor {
+  position: relative;
+}
+.header__image-decor::after,
+.header__image-decor::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.15)) contrast(1.1);
+  -webkit-filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.15)) contrast(1.1);
+}
+.header__image-decor::after {
+  z-index: 99;
+  background-image: url('../assets/img/flashlights-1.png');
+}
+.header__image-decor::before {
+  z-index: 98;
+  background-image: url('../assets/img/flashlights-2.png');
+}
+
+.header__decor {
+  width: 100%;
+  object-fit: cover;
+  filter: drop-shadow(2px 4px 6px rgba(6, 3, 25, 0.6));
+  -webkit-filter: drop-shadow(2px 4px 6px rgba(6, 3, 25, 0.6));
+}
+
+.page {
+  flex: 1 1 auto;
+}
+
+.footer {
+}
+
+.snow {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+#canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}

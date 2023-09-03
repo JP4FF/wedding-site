@@ -7,20 +7,30 @@
       content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="style.css" />
-    <title>Wedding</title>
+      href="css/resetCSS.css" />
+    <link
+      rel="stylesheet"
+      href="css/style.css" />
+    <title>Wedding(02-12-2023)</title>
   </head>
   <body>
-    <div class="content">
-      <h1 class="title">
-        Привет! <br />
-        Скоро здесь будет вся необходимая информация
-      </h1>
-      <div class="image-box">
-        <img
-          src="assets/img/IMG_4757.webp"
-          alt="Клэр" />
-      </div>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__image-decor">
+          <img
+            class="header__decor"
+            src="./assets/img/trees-decor.png"
+            alt="" />
+        </div>
+      </header>
+      <main class="page">Page</main>
+      <footer class="footer">Footer</footer>
+
+      <section class="snow">
+        <canvas id="canvas"></canvas>
+      </section>
     </div>
+
+    <script src="./js/snow.js"></script>
   </body>
 </html>
