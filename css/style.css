@@ -11,10 +11,14 @@
 }
 /* ---------------------------------------------------- */
 
-html,
-body {
+html {
   height: 100dvh;
+}
+
+body {
+  height: 100%;
   font-family: 'AGOpus', sans-serif;
+  background-color: #4d6379;
 }
 
 .wrapper {
