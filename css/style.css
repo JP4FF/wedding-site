@@ -12,7 +12,8 @@
 /* ---------------------------------------------------- */
 
 html {
-  height: 100dvh;
+  /* height: 100dvh; */
+  height: 100lvh;
 }
 
 body {
@@ -50,7 +51,7 @@ body {
 }
 
 .header {
-  position: relative;
+  position: fixed;
 }
 
 .header__image-decor {
