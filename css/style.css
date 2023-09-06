@@ -53,6 +53,7 @@ body {
 .header {
   position: relative;
   z-index: 50;
+  background-color: black;
 }
 
 .header__image-decor {
