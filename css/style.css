@@ -18,7 +18,8 @@ html {
 body {
   height: 100%;
   font-family: 'AGOpus', sans-serif;
-  background-color: #4d6379;
+  background-color: #0e141b;
+  /* background-color: #4d6379; */
 }
 
 .wrapper {
@@ -53,7 +54,6 @@ body {
 .header {
   position: relative;
   z-index: 50;
-  background-color: black;
 }
 
 .header__image-decor {
