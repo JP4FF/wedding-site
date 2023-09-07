@@ -1,7 +1,13 @@
-@font-face {
-  font-family: 'AGOpus';
+/* @font-face {
+  font-family: 'AGOpus Roman';
   font-weight: 400;
   src: url('../assets/fonts/Agopus-Roman.ttf');
+} */
+
+@font-face {
+  font-family: 'AGOpus Cyrillic';
+  font-weight: 400;
+  src: url('../assets/fonts/Agopus-Cyrillic.otf');
 }
 
 @font-face {
@@ -12,22 +18,22 @@
 /* ---------------------------------------------------- */
 
 html {
-  min-height: 100dvh;
+  scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
-  font-family: 'AGOpus', sans-serif;
+  font-family: 'AGOpus Cyrillic', sans-serif;
   background-color: #0e141b;
   /* background-color: #4d6379; */
 }
 
 .wrapper {
   position: relative;
+  min-height: 100dvh;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100%;
   background-image: radial-gradient(
       circle,
       transparent 70%,
@@ -47,6 +53,7 @@ body {
   height: 100%;
   background-image: url('../assets/img/starts.png');
   background-size: contain;
+  background-position: top center;
   background-repeat: no-repeat;
   pointer-events: none;
 }
@@ -90,37 +97,58 @@ body {
 }
 
 .page {
-  flex: 1 1 auto;
+  position: relative;
+  top: max(-100px, -15vw);
+  padding: 0 10px 10px;
+  flex: 1 0 auto;
+  /* transform: translateY(-10vw); */
 }
 
-.main__logo {
-  transform: translateY(-10vw);
+.page__logo {
+  margin-top: max(30px, 7vw);
 }
 
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: max(15px, 2vw);
 }
 
 .logo__text {
   font-family: 'Chervil', sans-serif;
-  font-size: clamp(28px, 0.5rem + 7vw, 56px);
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: clamp(28px, 0.5rem + 5vw, 120px);
+  color: #1a1a19;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
 }
 
 .logo__image-box {
   flex-shrink: 0;
-  width: max(40px, 10vw);
-  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.2));
-  -webkit-filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.2));
-  -moz-filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.2));
+  width: clamp(40px, 9vw, 150px);
+  filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.3));
+  -webkit-filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.3));
+  -moz-filter: drop-shadow(2px 4px 2px rgba(0, 0, 0, 0.3));
 }
 
 .logo__image {
   width: 100%;
   object-fit: contain;
+}
+
+.page__greeting {
+  color: #603e18;
+  font-size: clamp(16px, 0.5rem + 2.5vw, 76px);
+  text-align: center;
+  line-height: 1.2;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.18);
+}
+
+.page__wedding-date {
+  margin-top: max(35px, 7vw);
+  text-align: center;
+  color: #ffffff;
+  font-size: clamp(22px, 0.5rem + 3vw, 76px);
+  /* text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2); */
 }
 
 .footer {
