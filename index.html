@@ -49,7 +49,7 @@
         <section class="page__wedding-date">02 | 12 | 2023</section>
 
         <section class="page__info info">
-          <h2 class="info__title">
+          <h2 class="info__title title">
             Информация, которая <br />
             может быть Вам полезна:
           </h2>
@@ -84,7 +84,7 @@
               </div>
               <h3 class="info__item-text text">
                 Для Вашего удобства будет предусмотрен трансфер до усадьбы и
-                обратно.
+                обратно
               </h3>
             </li>
             <li class="info__item">
@@ -115,7 +115,7 @@
                   class="info__item-icon" />
               </div>
               <h3 class="info__item-text text">
-                Определенный дресс-код на нашей свадьбе не предусмотрен, будьте
+                Определенный дресс код на нашей свадьбе не предусмотрен, будьте
                 красивыми в том, что Вам нравится!
               </h3>
             </li>
@@ -133,6 +133,90 @@
               </h3>
             </li>
           </ul>
+        </section>
+
+        <section class="page__form form">
+          <h2 class="form__title title">
+            Пожалуйста, заполните форму ниже, <br />
+            подтвердив свое присутствие:
+          </h2>
+          <form
+            action=""
+            class="form__body">
+            <label
+              for=""
+              class="form__label">
+              Имя гостя
+            </label>
+            <div class="form__input-box">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Имя 1, Имя 2, и т.д."
+                required />
+            </div>
+
+            <label
+              for="transfer"
+              class="form__label">
+              Нужен ли Вам трансфер до усадьбы?
+            </label>
+            <div class="form__custom-select">
+              <select
+                name="transfer"
+                id="transfer"
+                required>
+                <option value="no">нет</option>
+                <option value="yes">да</option>
+              </select>
+            </div>
+
+            <label
+              for="overnight-stay"
+              class="form__label">
+              Нужно ли Вам размещение на ночь в усадьбе?
+            </label>
+            <div class="form__custom-select">
+              <select
+                name="overnight-stay"
+                id="overnight-stay"
+                required>
+                <option value="no">нет</option>
+                <option value="yes">да</option>
+              </select>
+            </div>
+
+            <label
+              for="hot-dishes"
+              class="form__label">
+              Ваши предпочтения по горячим блюдам:
+            </label>
+            <div class="form__custom-select">
+              <select
+                name="hot-dishes"
+                id="hot-dishes"
+                required>
+                <option value="meat">мясо</option>
+                <option value="fish">рыба</option>
+                <option value="vegetarian">вегетерианец</option>
+              </select>
+            </div>
+
+            <label
+              for="additional-info"
+              class="form__label">
+              Наличие аллергии/непереносимости/нелюбви к каким-либо продуктам:
+            </label>
+            <textarea
+              name="additional-info"
+              id="additional-info"
+              cols="30"
+              rows="10"></textarea>
+
+            <div class="form__actions">
+              <button type="submit">Отправить форму</button>
+            </div>
+          </form>
         </section>
       </main>
       <footer class="footer">Footer</footer>
