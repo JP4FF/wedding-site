@@ -5,12 +5,6 @@
 }
 
 @font-face {
-  font-family: 'AGOpus Cyrillic';
-  font-weight: 700;
-  src: url('../assets/fonts/AGOpus-Cyrillic-Bold.otf');
-}
-
-@font-face {
   font-family: 'Chervil';
   font-weight: 400;
   src: url('../assets/fonts/Chervil-Regular.otf');
