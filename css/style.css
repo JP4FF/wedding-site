@@ -16,6 +16,9 @@
   src: url('../assets/fonts/Chervil-Regular.otf');
 }
 /* ---------------------------------------------------- */
+:root {
+  --title-margin: max(30px, 2vw);
+}
 
 html {
   scroll-behavior: smooth;
@@ -235,16 +238,17 @@ body {
 
 .page__info {
   margin-top: max(50px, 8vw);
+  margin-bottom: max(80px, 8vw);
 }
 
 .info {
 }
 
 .info__title {
+  margin-bottom: var(--title-margin);
 }
 
 .info__list {
-  margin-top: max(30px, 5vw);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -263,12 +267,13 @@ body {
   justify-items: center;
 
   background: rgba(255, 255, 255, 0.2);
-  border: max(1px, 0.1vw) solid rgba(255, 255, 255, 0.3);
+  border: max(1px, 0.15vw) solid rgba(255, 255, 255, 0.3);
   border-radius: max(16px, 1vw);
 
   box-shadow: 0 max(4px, 0.5vw) max(10px, 1.2vw) rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(max(2px, 0.3vw));
   -webkit-backdrop-filter: blur(max(2px, 0.3vw));
+  -moz-backdrop-filter: blur(max(2px, 0.3vw));
   overflow: hidden;
 }
 .info__item:hover .info__item-icon-box {
@@ -349,7 +354,6 @@ body {
 }
 
 .page__form {
-  margin-top: max(80px, 7vw);
 }
 
 .form {
@@ -357,23 +361,30 @@ body {
 
 .form__body {
   margin: 0 auto;
-  padding: max(25px, 3vw) max(15px, 2vw);
-  width: min(800px, 90%);
+  padding: max(25px, 3vw) max(15px, 2.8vw);
+  width: min(1800px, 90%);
 
   background: rgba(255, 255, 255, 0.3);
-  border: max(1px, 0.2vw) solid rgba(255, 255, 255, 0.35);
+  border: max(1px, 0.15vw) solid rgba(255, 255, 255, 0.35);
   border-radius: max(16px, 1vw);
 
   backdrop-filter: blur(max(3px, 0.35vw));
   -webkit-backdrop-filter: blur(max(3px, 0.35vw));
+  -moz-backdrop-filter: blur(max(3px, 0.35vw));
 }
 
 .form__title {
-  margin-bottom: max(30px, 5vw);
+  margin-bottom: var(--title-margin);
+}
+
+.form__row:not(:first-child) {
+  margin-top: max(25px, 3vw);
 }
 
 .form__label {
-  font-size: clamp(16px, 0.5rem + 1vw, 68px);
+  display: inline-block;
+  margin-bottom: max(2.5px, 0.2vw);
+  font-size: clamp(14px, 0.5rem + 1vw, 64px);
   line-height: 1.15;
   letter-spacing: 0.5px;
   /* color: #f9f6ed; */
@@ -385,24 +396,154 @@ body {
   position: relative;
   height: max-content;
 }
-.form__input-box::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #ffffff;
-}
 
 .form__input {
-  padding: 5px 7px;
+  padding: max(5px, 0.5vw) max(7px, 0.7vw);
+  width: 100%;
   /* font-family: 'AGOpus Cyrillic', sans-serif; */
   font-size: clamp(14px, 0.5rem + 1vw, 60px);
-  background-color: rgba(255, 255, 255, 0.4);
+  color: #f9f6ed;
+  background-color: rgba(0, 0, 0, 0.18);
+  border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
+  transition: background-color ease 0.3s, border-color ease 0.3s;
+}
+.form__input::placeholder {
+  color: #d6d6d6;
+}
+.form__input:focus {
+  border-color: #ffd45f;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.form__input._error {
+  border-color: #ff3131;
+}
+.form__input._error {
+  border-color: #ff3131;
+}
+
+.form__error {
+  display: none;
+  margin-top: max(10px, 1vw);
+  font-size: clamp(14px, 0.5rem + 1vw, 60px);
+  color: #ea4141;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.15);
+}
+.form__error._displayed {
+  display: block;
 }
 
 .form__custom-select {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.form__custom-select select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: max(5px, 0.5vw) max(40px, 4vw) max(5px, 0.5vw) max(7px, 0.7vw);
+  width: 100%;
+  color: #f9f6ed;
+  font-family: inherit;
+  font-size: clamp(14px, 0.5rem + 1vw, 60px);
+  border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.18);
+  box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
+  transition: background-color ease 0.3s, border-color ease 0.3s;
+}
+.form__custom-select select:focus {
+  border-color: #ffd45f;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+@media screen and (min-width: 1023.98px) {
+  .form__label + .form__custom-select {
+    margin-left: min(20px, 1vw);
+  }
+
+  .form__custom-select {
+    display: inline-flex;
+    margin-right: auto;
+  }
+  .form__custom-select select {
+    width: max-content;
+  }
+}
+
+.select-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: max(35px, 3.5vw);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.22);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+.select-icon img {
+  width: 35%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.form__custom-select select:focus + .select-icon {
+  background-color: rgba(0, 0, 0, 0.28);
+}
+.form__custom-select select:focus + .select-icon img {
+  transform: rotate(180deg);
+}
+
+.form__textarea {
+  padding: max(7px, 0.7vw);
+  min-height: max(120px, 9vw);
+  width: 100%;
+  font-size: clamp(14px, 0.5rem + 1vw, 60px);
+  color: #f9f6ed;
+  border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.18);
+  box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
+  resize: none;
+  transition: background-color ease 0.3s, border-color ease 0.3s;
+}
+.form__textarea:focus {
+  border-color: #ffd45f;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.form__actions {
+  margin-top: max(40px, 3.5vw);
+  display: flex;
+  justify-content: center;
+}
+
+.form__button {
+  padding: max(7px, 0.7vw) max(15px, 1.5vw);
+  font-family: inherit;
+  font-size: clamp(15px, 0.5rem + 1.1vw, 65px);
+  color: #f9f6ed;
+  text-align: center;
+  border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  border-radius: max(50px, 10vw);
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+.form__button:hover {
+  background-color: rgba(0, 0, 0, 0.35);
+  transform: scale(1.05);
+}
+.form__button:focus {
+  border-color: #ffd45f;
+}
+.form__button:active {
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0.9);
 }
 
 .footer {

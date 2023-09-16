@@ -141,80 +141,116 @@
             подтвердив свое присутствие:
           </h2>
           <form
+            id="wedding-form"
             action=""
             class="form__body">
-            <label
-              for=""
-              class="form__label">
-              Имя гостя
-            </label>
-            <div class="form__input-box">
-              <input
-                type="text"
-                class="form__input"
-                placeholder="Имя 1, Имя 2, и т.д."
-                required />
+            <div class="form__row">
+              <label
+                for="name"
+                class="form__label">
+                Имена гостей:
+              </label>
+              <div class="form__input-box">
+                <input
+                  id="name"
+                  type="text"
+                  class="form__input"
+                  placeholder="Имя 1, Имя 2, и т.д."
+                  required />
+                <p class="form__error">
+                  Поле "Имена гостей" не может быть пустым!
+                </p>
+              </div>
             </div>
 
-            <label
-              for="transfer"
-              class="form__label">
-              Нужен ли Вам трансфер до усадьбы?
-            </label>
-            <div class="form__custom-select">
-              <select
-                name="transfer"
-                id="transfer"
-                required>
-                <option value="no">нет</option>
-                <option value="yes">да</option>
-              </select>
+            <div class="form__row">
+              <label
+                for="transfer"
+                class="form__label">
+                Нужен ли Вам трансфер до усадьбы?
+              </label>
+              <div class="form__custom-select">
+                <select
+                  name="transfer"
+                  id="transfer"
+                  required>
+                  <option value="unknown">выберите вариант</option>
+                  <option value="no">нет</option>
+                  <option value="yes">да</option>
+                </select>
+                <div class="select-icon">
+                  <img
+                    src="./assets/img/icons/chevron-down.svg"
+                    alt="chevron down" />
+                </div>
+              </div>
             </div>
 
-            <label
-              for="overnight-stay"
-              class="form__label">
-              Нужно ли Вам размещение на ночь в усадьбе?
-            </label>
-            <div class="form__custom-select">
-              <select
-                name="overnight-stay"
-                id="overnight-stay"
-                required>
-                <option value="no">нет</option>
-                <option value="yes">да</option>
-              </select>
+            <div class="form__row">
+              <label
+                for="overnight-stay"
+                class="form__label">
+                Нужно ли Вам размещение на ночь в усадьбе?
+              </label>
+              <div class="form__custom-select">
+                <select
+                  name="overnight-stay"
+                  id="overnight-stay"
+                  required>
+                  <option value="unknown">выберите вариант</option>
+                  <option value="no">нет</option>
+                  <option value="yes">да</option>
+                </select>
+                <div class="select-icon">
+                  <img
+                    src="./assets/img/icons/chevron-down.svg"
+                    alt="chevron down" />
+                </div>
+              </div>
             </div>
 
-            <label
-              for="hot-dishes"
-              class="form__label">
-              Ваши предпочтения по горячим блюдам:
-            </label>
-            <div class="form__custom-select">
-              <select
-                name="hot-dishes"
-                id="hot-dishes"
-                required>
-                <option value="meat">мясо</option>
-                <option value="fish">рыба</option>
-                <option value="vegetarian">вегетерианец</option>
-              </select>
+            <div class="form__row">
+              <label
+                for="hot-dishes"
+                class="form__label">
+                Ваши предпочтения по горячим блюдам:
+              </label>
+              <div class="form__custom-select">
+                <select
+                  name="hot-dishes"
+                  id="hot-dishes"
+                  required>
+                  <option value="unknown">выберите вариант</option>
+                  <option value="meat">мясо</option>
+                  <option value="fish">рыба</option>
+                  <option value="vegetarian">вегетерианец</option>
+                </select>
+                <div class="select-icon">
+                  <img
+                    src="./assets/img/icons/chevron-down.svg"
+                    alt="chevron down" />
+                </div>
+              </div>
             </div>
 
-            <label
-              for="additional-info"
-              class="form__label">
-              Наличие аллергии/непереносимости/нелюбви к каким-либо продуктам:
-            </label>
-            <textarea
-              name="additional-info"
-              id="additional-info"
-              cols="30"
-              rows="10"></textarea>
+            <div class="form__row">
+              <label
+                for="additional-info"
+                class="form__label">
+                Наличие аллергии/непереносимости/нелюбви к каким-либо продуктам:
+              </label>
+              <textarea
+                class="form__textarea"
+                name="additional-info"
+                id="additional-info"></textarea>
+            </div>
 
             <div class="form__actions">
-              <button type="submit">Отправить форму</button>
+              <button
+                class="form__button"
+                type="submit">
+                Отправить форму
+              </button>
             </div>
           </form>
         </section>
@@ -226,6 +262,7 @@
         count="180"></div> -->
     </div>
 
+    <script src="./js/index.js"></script>
     <!-- <script src="./js/pure-snow.js"></script> -->
   </body>
 </html>
