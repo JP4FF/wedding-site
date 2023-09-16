@@ -405,6 +405,7 @@ body {
   color: #f9f6ed;
   background-color: rgba(0, 0, 0, 0.18);
   border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  border-radius: 0;
   box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
   transition: background-color ease 0.3s, border-color ease 0.3s;
 }
@@ -449,6 +450,7 @@ body {
   font-family: inherit;
   font-size: clamp(14px, 0.5rem + 1vw, 60px);
   border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  border-radius: 0;
   background: rgba(0, 0, 0, 0.18);
   box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
   transition: background-color ease 0.3s, border-color ease 0.3s;
@@ -505,6 +507,7 @@ body {
   font-size: clamp(14px, 0.5rem + 1vw, 60px);
   color: #f9f6ed;
   border: max(1px, 0.1vw) solid rgba(0, 0, 0, 0.12);
+  border-radius: 0;
   background: rgba(0, 0, 0, 0.18);
   box-shadow: 0px max(2px, 0.2vw) max(3px, 0.3vw) rgba(99, 99, 99, 0.4);
   resize: none;
