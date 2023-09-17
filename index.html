@@ -136,7 +136,9 @@
         </section>
 
         <section class="page__form form">
-          <h2 class="form__title title">
+          <h2
+            id="form-title"
+            class="form__title title">
             Пожалуйста, заполните форму ниже, <br />
             подтвердив свое присутствие:
           </h2>
@@ -175,9 +177,9 @@
                   name="transfer"
                   id="transfer"
                   required>
-                  <option value="unknown">выберите вариант</option>
-                  <option value="no">нет</option>
-                  <option value="yes">да</option>
+                  <option value="неизвестно">выберите вариант</option>
+                  <option value="нет">нет</option>
+                  <option value="да">да</option>
                 </select>
                 <div class="select-icon">
                   <img
@@ -198,9 +200,9 @@
                   name="overnight-stay"
                   id="overnight-stay"
                   required>
-                  <option value="unknown">выберите вариант</option>
-                  <option value="no">нет</option>
-                  <option value="yes">да</option>
+                  <option value="неизвестно">выберите вариант</option>
+                  <option value="нет">нет</option>
+                  <option value="да">да</option>
                 </select>
                 <div class="select-icon">
                   <img
@@ -221,10 +223,10 @@
                   name="hot-dishes"
                   id="hot-dishes"
                   required>
-                  <option value="unknown">выберите вариант</option>
-                  <option value="meat">мясо</option>
-                  <option value="fish">рыба</option>
-                  <option value="vegetarian">вегетерианец</option>
+                  <option value="неизвестно">выберите вариант</option>
+                  <option value="мясо">мясо</option>
+                  <option value="рыба">рыба</option>
+                  <option value="вегетерианец">вегетерианец</option>
                 </select>
                 <div class="select-icon">
                   <img
@@ -253,17 +255,42 @@
                 Отправить форму
               </button>
             </div>
+
+            <div
+              id="loader"
+              class="loader-overlay _hidden">
+              <div class="loader"></div>
+            </div>
           </form>
+
+          <div
+            id="submit-result"
+            class="submit-result _hidden">
+            <h2
+              id="submit-result-title"
+              class="submit-result__title title"></h2>
+            <p
+              id="submit-result-text"
+              class="submit-result__text text"></p>
+          </div>
         </section>
       </main>
-      <footer class="footer">Footer</footer>
+      <footer class="footer"></footer>
 
-      <!-- <div
+      <div
         id="snow"
-        count="180"></div> -->
+        count="200"></div>
     </div>
 
     <script src="./js/index.js"></script>
-    <!-- <script src="./js/pure-snow.js"></script> -->
+    <script src="./js/pure-snow.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init('XtO7aV24NW1-XMl7s');
+      })();
+    </script>
   </body>
 </html>
