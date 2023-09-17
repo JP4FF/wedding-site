@@ -59,13 +59,13 @@ body {
   display: flex;
   flex-direction: column;
   background-image: radial-gradient(
-      circle,
+      circle at 50% 0%,
       transparent 90%,
       rgba(20, 20, 38, 0.6) 95%,
       rgb(0 1 8 / 80%) 100%
     ),
     url('../assets/img/main-bg.webp');
-  /* background-repeat: no-repeat; */
+  background-attachment: fixed;
   background-repeat: round;
   background-size: cover;
   overflow: hidden;
@@ -606,7 +606,6 @@ body {
 
 .footer {
   padding: max(10px, 2vw) max(20px, 4vw) max(20px, 4vw);
-  /* height: 60px; */
   border-top: max(1px, 0.15vw) solid rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(max(7px, 0.7vw));
   -webkit-backdrop-filter: blur(max(7px, 0.7vw));
