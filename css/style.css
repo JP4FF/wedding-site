@@ -605,11 +605,24 @@ body {
 }
 
 .footer {
-  height: 60px;
+  padding: max(10px, 2vw) max(20px, 4vw) max(20px, 4vw);
+  /* height: 60px; */
   border-top: max(1px, 0.15vw) solid rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(max(7px, 0.7vw));
   -webkit-backdrop-filter: blur(max(7px, 0.7vw));
   -moz-backdrop-filter: blur(max(7px, 0.7vw));
+}
+
+.footer__info {
+  font-size: clamp(14px, 0.5rem + 1vw, 64px);
+  line-height: 1.3;
+  color: #f9f6ed;
+  text-align: center;
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: underline dashed #35aeff;
 }
 
 /* HTML: <div class="loader"></div> */
