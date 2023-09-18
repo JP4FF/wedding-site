@@ -24,6 +24,9 @@ function getSnowAttributes() {
     snowflakesCount = Number(
       snowWrapper.attributes?.count?.value || snowflakesCount
     );
+    if (window.innerWidth < 475) {
+      snowflakesCount = Math.ceil(0.7 * snowflakesCount);
+    }
   }
 }
 

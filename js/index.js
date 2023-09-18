@@ -9,7 +9,6 @@ function main() {
 
   function submitForm(e) {
     e.preventDefault();
-    loader.classList.remove('_hidden');
 
     const name = document.getElementById('name');
     const transfer = document.getElementById('transfer');
@@ -18,8 +17,6 @@ function main() {
     const additionalInfo = document.getElementById('additional-info');
 
     const errorName = document.querySelector('#name + .form__error');
-
-    console.log(name.value);
 
     if (name.value.trim() === '') {
       name.classList.add('_error');
@@ -30,6 +27,8 @@ function main() {
       errorName.classList.remove('_displayed');
     }
 
+    loader.classList.remove('_hidden');
+
     const templateParams = {
       names: name.value,
       transfer: transfer.value,
@@ -38,7 +37,7 @@ function main() {
       additional_info: additionalInfo.value,
     };
 
-    console.log(templateParams);
+    // console.log(templateParams);
     // loader.classList.add('_hidden');
     // showSubmitResult('SUCCESS');
     // showSubmitResult('FAILED');
